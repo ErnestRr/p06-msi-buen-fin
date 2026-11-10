@@ -1,0 +1,418 @@
+{
+ "costo_mercancia_pct": 67.99,
+ "comision_promedio_banxico_pct": 2.94,
+ "terminales": {
+  "clip": {
+   "nombre": "Clip (referencia de terceros)",
+   "base": 2.99,
+   "sobretasa": {
+    "3": 4.57,
+    "6": 7.57,
+    "12": 12.77
+   }
+  },
+  "mp": {
+   "nombre": "Mercado Pago Point (oficial)",
+   "base": 3.5,
+   "sobretasa": {
+    "3": 4.69,
+    "6": 7.69,
+    "12": 12.89
+   }
+  }
+ },
+ "referencia": {
+  "clip_iva_acreditable": {
+   "3": {
+    "0": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 4.57,
+     "fee_total": 7.5600000000000005,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 24.450000000000003,
+     "unidades_extra_pct": 18.691206543967276,
+     "descuento_equivalente_pct": 4.569999999999997,
+     "tasa_anual_pct": 32.54682120645482
+    },
+    "10": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 4.57,
+     "fee_total": 7.5600000000000005,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 15.206000000000003,
+     "unidades_extra_pct": 90.84571879521239,
+     "descuento_equivalente_pct": 14.112999999999998,
+     "tasa_anual_pct": 32.54682120645482
+    },
+    "20": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 4.57,
+     "fee_total": 7.5600000000000005,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 5.962000000000003,
+     "unidades_extra_pct": 386.7494129486747,
+     "descuento_equivalente_pct": 23.655999999999988,
+     "tasa_anual_pct": 32.54682120645482
+    }
+   },
+   "6": {
+    "0": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 7.57,
+     "fee_total": 10.56,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 21.450000000000003,
+     "unidades_extra_pct": 35.291375291375296,
+     "descuento_equivalente_pct": 7.5699999999999985,
+     "tasa_anual_pct": 31.32036005787797
+    },
+    "10": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 7.57,
+     "fee_total": 10.56,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 12.506,
+     "unidades_extra_pct": 132.04861666400132,
+     "descuento_equivalente_pct": 16.813,
+     "tasa_anual_pct": 31.32036005787797
+    },
+    "20": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 7.57,
+     "fee_total": 10.56,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 3.5619999999999976,
+     "unidades_extra_pct": 714.7108366086475,
+     "descuento_equivalente_pct": 26.05599999999999,
+     "tasa_anual_pct": 31.32036005787797
+    }
+   },
+   "12": {
+    "0": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 12.77,
+     "fee_total": 15.76,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 16.250000000000014,
+     "unidades_extra_pct": 78.58461538461525,
+     "descuento_equivalente_pct": 12.770000000000003,
+     "tasa_anual_pct": 29.340535704957183
+    },
+    "10": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 12.77,
+     "fee_total": 15.76,
+     "margen_base": 29.020000000000003,
+     "margen_msi": 7.826000000000008,
+     "unidades_extra_pct": 270.81523128034723,
+     "descuento_equivalente_pct": 21.493000000000006,
+     "tasa_anual_pct": 29.340535704957183
+    },
+    "20": {
+     "fee_base": 2.99,
+     "fee_sobretasa": 12.77,
+     "fee_total": 15.76,
+     "margen_base": 29.020000000000003,
+     "margen_msi": -0.597999999999999,
+     "unidades_extra_pct": null,
+     "descuento_equivalente_pct": 30.215999999999998,
+     "tasa_anual_pct": 29.340535704957183
+    }
+   }
+  },
+  "clip_iva_no_acreditable": {
+   "3": {
+    "0": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 5.3012,
+     "fee_total": 8.7696,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 23.240400000000008,
+     "unidades_extra_pct": 22.810278652690986,
+     "descuento_equivalente_pct": 5.301199999999994,
+     "tasa_anual_pct": 38.861951695659
+    },
+    "10": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 5.3012,
+     "fee_total": 8.7696,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 14.117360000000005,
+     "unidades_extra_pct": 102.17377753347647,
+     "descuento_equivalente_pct": 14.771079999999992,
+     "tasa_anual_pct": 38.861951695659
+    },
+    "20": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 5.3012,
+     "fee_total": 8.7696,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 4.994320000000002,
+     "unidades_extra_pct": 471.48120264620604,
+     "descuento_equivalente_pct": 24.24095999999999,
+     "tasa_anual_pct": 38.861951695659
+    }
+   },
+   "6": {
+    "0": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 8.7812,
+     "fee_total": 12.249600000000001,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 19.760400000000004,
+     "unidades_extra_pct": 44.43837169288072,
+     "descuento_equivalente_pct": 8.7812,
+     "tasa_anual_pct": 37.52586539935794
+    },
+    "10": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 8.7812,
+     "fee_total": 12.249600000000001,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 10.98536,
+     "unidades_extra_pct": 159.81488089602897,
+     "descuento_equivalente_pct": 17.903079999999992,
+     "tasa_anual_pct": 37.52586539935794
+    },
+    "20": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 8.7812,
+     "fee_total": 12.249600000000001,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 2.210319999999996,
+     "unidades_extra_pct": 1191.288139273954,
+     "descuento_equivalente_pct": 27.024959999999997,
+     "tasa_anual_pct": 37.52586539935794
+    }
+   },
+   "12": {
+    "0": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 14.813199999999998,
+     "fee_total": 18.281599999999997,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 13.728400000000008,
+     "unidades_extra_pct": 107.90186766119861,
+     "descuento_equivalente_pct": 14.813199999999993,
+     "tasa_anual_pct": 35.39002640195334
+    },
+    "10": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 14.813199999999998,
+     "fee_total": 18.281599999999997,
+     "margen_base": 28.541600000000006,
+     "margen_msi": 5.556560000000005,
+     "unidades_extra_pct": 413.65593100767353,
+     "descuento_equivalente_pct": 23.331879999999995,
+     "tasa_anual_pct": 35.39002640195334
+    },
+    "20": {
+     "fee_base": 3.4684,
+     "fee_sobretasa": 14.813199999999998,
+     "fee_total": 18.281599999999997,
+     "margen_base": 28.541600000000006,
+     "margen_msi": -2.6152799999999985,
+     "unidades_extra_pct": null,
+     "descuento_equivalente_pct": 31.850559999999994,
+     "tasa_anual_pct": 35.39002640195334
+    }
+   }
+  },
+  "mp_iva_acreditable": {
+   "3": {
+    "0": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 4.69,
+     "fee_total": 8.190000000000001,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 23.820000000000007,
+     "unidades_extra_pct": 19.689336691855573,
+     "descuento_equivalente_pct": 4.690000000000005,
+     "tasa_anual_pct": 33.559337601339024
+    },
+    "10": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 4.69,
+     "fee_total": 8.190000000000001,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 14.63900000000001,
+     "unidades_extra_pct": 94.7537400095634,
+     "descuento_equivalente_pct": 14.221000000000005,
+     "tasa_anual_pct": 33.559337601339024
+    },
+    "20": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 4.69,
+     "fee_total": 8.190000000000001,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 5.458000000000013,
+     "unidades_extra_pct": 422.3525100769502,
+     "descuento_equivalente_pct": 23.751999999999995,
+     "tasa_anual_pct": 33.559337601339024
+    }
+   },
+   "6": {
+    "0": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 7.69,
+     "fee_total": 11.190000000000001,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 20.820000000000007,
+     "unidades_extra_pct": 36.93563880883764,
+     "descuento_equivalente_pct": 7.689999999999997,
+     "tasa_anual_pct": 31.918007858455354
+    },
+    "10": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 7.69,
+     "fee_total": 11.190000000000001,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 11.939000000000007,
+     "unidades_extra_pct": 138.79721919758765,
+     "descuento_equivalente_pct": 16.920999999999996,
+     "tasa_anual_pct": 31.918007858455354
+    },
+    "20": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 7.69,
+     "fee_total": 11.190000000000001,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 3.058000000000007,
+     "unidades_extra_pct": 832.3086984957469,
+     "descuento_equivalente_pct": 26.151999999999997,
+     "tasa_anual_pct": 31.918007858455354
+    }
+   },
+   "12": {
+    "0": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 12.89,
+     "fee_total": 16.39,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 15.620000000000005,
+     "unidades_extra_pct": 82.52240717029447,
+     "descuento_equivalente_pct": 12.89,
+     "tasa_anual_pct": 29.683207190828597
+    },
+    "10": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 12.89,
+     "fee_total": 16.39,
+     "margen_base": 28.510000000000005,
+     "margen_msi": 7.259,
+     "unidades_extra_pct": 292.7538228406117,
+     "descuento_equivalente_pct": 21.601000000000003,
+     "tasa_anual_pct": 29.683207190828597
+    },
+    "20": {
+     "fee_base": 3.5,
+     "fee_sobretasa": 12.89,
+     "fee_total": 16.39,
+     "margen_base": 28.510000000000005,
+     "margen_msi": -1.1020000000000039,
+     "unidades_extra_pct": null,
+     "descuento_equivalente_pct": 30.311999999999994,
+     "tasa_anual_pct": 29.683207190828597
+    }
+   }
+  },
+  "mp_iva_no_acreditable": {
+   "3": {
+    "0": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 5.4404,
+     "fee_total": 9.500399999999999,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 22.509600000000006,
+     "unidades_extra_pct": 24.169243345061652,
+     "descuento_equivalente_pct": 5.4404,
+     "tasa_anual_pct": 40.104510790371314
+    },
+    "10": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 5.4404,
+     "fee_total": 9.500399999999999,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 13.459640000000007,
+     "unidades_extra_pct": 107.65785711950686,
+     "descuento_equivalente_pct": 14.896359999999998,
+     "tasa_anual_pct": 40.104510790371314
+    },
+    "20": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 5.4404,
+     "fee_total": 9.500399999999999,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 4.409680000000009,
+     "unidades_extra_pct": 533.8328404782195,
+     "descuento_equivalente_pct": 24.352319999999995,
+     "tasa_anual_pct": 40.104510790371314
+    }
+   },
+   "6": {
+    "0": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 8.920399999999999,
+     "fee_total": 12.9804,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 19.029600000000002,
+     "unidades_extra_pct": 46.87644511708078,
+     "descuento_equivalente_pct": 8.920399999999995,
+     "tasa_anual_pct": 38.264353746278566
+    },
+    "10": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 8.920399999999999,
+     "fee_total": 12.9804,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 10.327640000000002,
+     "unidades_extra_pct": 170.6329810101824,
+     "descuento_equivalente_pct": 18.02836,
+     "tasa_anual_pct": 38.264353746278566
+    },
+    "20": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 8.920399999999999,
+     "fee_total": 12.9804,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 1.6256800000000027,
+     "unidades_extra_pct": 1619.2805472171622,
+     "descuento_equivalente_pct": 27.13631999999999,
+     "tasa_anual_pct": 38.264353746278566
+    }
+   },
+   "12": {
+    "0": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 14.952399999999999,
+     "fee_total": 19.0124,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 12.997600000000006,
+     "unidades_extra_pct": 115.03969963685599,
+     "descuento_equivalente_pct": 14.952399999999999,
+     "tasa_anual_pct": 35.81939000137262
+    },
+    "10": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 14.952399999999999,
+     "fee_total": 19.0124,
+     "margen_base": 27.950000000000006,
+     "margen_msi": 4.898840000000007,
+     "unidades_extra_pct": 470.5432306423555,
+     "descuento_equivalente_pct": 23.45716,
+     "tasa_anual_pct": 35.81939000137262
+    },
+    "20": {
+     "fee_base": 4.06,
+     "fee_sobretasa": 14.952399999999999,
+     "fee_total": 19.0124,
+     "margen_base": 27.950000000000006,
+     "margen_msi": -3.1999199999999917,
+     "unidades_extra_pct": null,
+     "descuento_equivalente_pct": 31.96192,
+     "tasa_anual_pct": 35.81939000137262
+    }
+   }
+  }
+ }
+}

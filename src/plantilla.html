@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuánto cuesta ofrecer meses sin intereses</title>
+<style>
+@font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;src:url(data:font/woff2;base64,%%FONT_SERIF%%) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(data:font/woff2;base64,%%FONT_SERIF_IT%%) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;src:url(data:font/woff2;base64,%%FONT_INTER%%) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;src:url(data:font/woff2;base64,%%FONT_INTER_500%%) format("woff2")}
+:root{--marino:#12213A;--acero:#4A6785;--terra:#C4533A;--marfil:#F6F1E7;--grafito:#1B1F27;--gris:#5B6573;--claro:#9DB0C6;
+--tarjeta:#FBF8F1;--borde:#E3DBC9;--pista:#ECE5D6;--linea:#D9D2C2;--verde:#2B6A52;--vino:#8F2B3E}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--marfil);color:var(--grafito);font-family:"Inter",Arial,sans-serif;font-size:15px;line-height:1.45}
+.marco{border:14px solid var(--marino);min-height:100vh;display:flex;flex-direction:column}
+main{max-width:1120px;width:100%;margin:0 auto;padding:22px 28px 8px;flex:1}
+.etq{font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border-bottom:2px solid var(--acero);display:inline-block;padding-bottom:3px}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:42px;line-height:1.05;margin:12px 0 4px}
+h1 em{color:var(--terra)}
+.sub{color:var(--gris)}
+.grid{display:grid;grid-template-columns:270px 1fr;gap:18px;margin-top:16px}
+.card{background:var(--tarjeta);border:1px solid var(--borde);border-radius:4px;padding:16px 18px}
+label{display:block;font-weight:500;font-size:13px;margin:12px 0 4px}
+label:first-child{margin-top:0}
+input[type=number],select{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--linea);border-radius:4px;background:var(--marfil);color:var(--grafito)}
+.seg{display:flex;gap:6px}
+.seg button{flex:1;font:inherit;font-weight:500;padding:8px 0;border:1px solid var(--linea);background:var(--marfil);color:var(--marino);border-radius:4px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--marino);color:var(--marfil);border-color:var(--marino)}
+details{margin-top:12px;font-size:13px}
+details summary{cursor:pointer;color:var(--acero);font-weight:500}
+.nota{font-size:12px;color:var(--gris);margin-top:4px}
+.pos{color:var(--verde)}.neg{color:var(--vino)}.neu{color:var(--acero)}
+.d{font-weight:500}
+.veredicto{display:flex;gap:16px;align-items:center;padding:16px 20px;background:var(--tarjeta);border:1px solid var(--borde);border-radius:4px}
+.veredicto .luz{width:30px;height:30px;border-radius:50%;flex:none}
+.veredicto b{font-family:"Instrument Serif",serif;font-weight:400;font-size:34px;line-height:1.05;display:block}
+.veredicto span{color:var(--gris);font-size:15px}
+.veredicto.verde .luz{background:var(--verde)}.veredicto.verde b{color:var(--verde)}
+.veredicto.medio .luz{background:var(--acero)}.veredicto.medio b{color:var(--acero)}
+.veredicto.rojo .luz{background:var(--vino)}.veredicto.rojo b{color:var(--vino)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.kpi{background:var(--tarjeta);border:1px solid var(--borde);border-radius:4px;padding:12px 16px}
+.kpi .t{font-size:13px;color:var(--gris)}
+.kpi .v{font-family:"Instrument Serif",serif;font-size:44px;line-height:1.1;color:var(--marino)}
+.kpi .p{font-size:12.5px;color:var(--gris)}
+.regla{margin-top:12px;padding:12px 18px;border-left:4px solid var(--marino);background:var(--tarjeta);font-size:15px}
+.regla b{font-weight:500}
+.graf{margin-top:16px}
+.graf h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:24px}
+svg text{font-family:"Inter",Arial,sans-serif}
+.leyenda{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--gris);margin-top:4px}
+.leyenda i{display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:-1px;border-radius:2px}
+.fuentes{max-width:1120px;margin:6px auto 0;padding:0 28px 14px;width:100%}
+.fuentes table{width:100%;border-collapse:collapse;font-size:11.5px;color:var(--gris)}
+.fuentes th{font-weight:500;text-align:left;color:var(--grafito);border-bottom:1px solid var(--linea);padding:3px 6px 3px 0}
+.fuentes td{padding:3px 6px 3px 0;vertical-align:top;border-bottom:1px solid var(--pista)}
+.fuentes p{font-size:12px;color:var(--gris);margin-top:6px}
+.fuentes p.legal{font-style:italic}
+.fuentes p b{font-weight:500;color:var(--grafito)}
+.filete{height:4px;background:var(--terra)}
+footer{background:var(--marino);color:var(--marfil);display:flex;justify-content:space-between;align-items:center;padding:12px 28px;gap:12px}
+footer .n{display:flex;align-items:center;gap:12px;font-family:"Instrument Serif",serif;font-size:26px}
+footer .r{font-weight:500;font-size:12px;letter-spacing:.06em}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr}h1{font-size:32px}.fuentes table{display:block;overflow-x:auto}}
+
+body{font-size:16px}
+.paso{font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acero);margin-bottom:8px}
+.sub{font-size:18px;max-width:900px;margin-top:6px}
+.nota{font-size:13.5px}
+.kpi .t{font-size:15px;min-height:44px}
+.kpi .v{font-size:54px;white-space:nowrap}
+.kpi .v .d{font-weight:400}
+.kpi .p{font-size:14px}
+.veredicto b{font-size:38px}
+.veredicto span{font-size:18px;color:var(--grafito);display:block;margin-top:2px}
+.regla{font-size:17px}
+.leyenda{font-size:13.5px}
+.fuentes table,.fuentes p{font-size:12.5px}
+input[type=number],select{font-size:17px}
+.graf h2{font-size:28px}
+.plazos{width:100%;border-collapse:collapse;margin-top:12px;background:var(--tarjeta);border:1px solid var(--borde);font-size:16px}
+.plazos th{font-weight:500;font-size:13px;color:var(--gris);text-align:left;padding:8px 12px;border-bottom:1px solid var(--linea)}
+.plazos td{padding:9px 12px;border-bottom:1px solid var(--pista);font-size:17px}
+.plazos tr:last-child td{border-bottom:0}
+.plazos tr.sel td{background:var(--pista)}
+.plazos td:first-child{font-weight:500}
+.acciones{margin:0;padding:12px 18px 12px 40px;background:var(--tarjeta);border-left:4px solid var(--marino);font-size:17px}
+.acciones li{margin:4px 0}
+.acciones b{font-weight:500}
+.regla{margin-top:10px}
+@media(max-width:900px){.plazos{font-size:14px}.plazos td,.plazos th{padding:6px}}
+</style>
+</head>
+<body>
+<div class="marco">
+<main>
+<span class="etq">Dueños de comercio · Buen Fin, 13 al 17 de noviembre</span>
+<h1>Tu cliente paga a 12 meses y tú cobras en 24 horas. Esos meses los <em>financia tu margen</em></h1>
+<p class="sub">Un MSI es un descuento que no sale en la etiqueta. Pon tus números y mira cuánto te cuesta y cuánto más tendrías que vender para no salir perdiendo.</p>
+
+<div class="grid">
+<section class="card" aria-label="Tus datos">
+  <div class="paso">1 · Pon tus números</div>
+  <label for="valor">Tu margen de ganancia, %</label>
+  <input id="valor" type="number" step="0.01" min="0" max="100" value="32.01">
+  <div class="nota">Lo que te queda de cada $100 que vendes, ya pagada la mercancía. Si no lo sabes, deja 32%: es el promedio del comercio al menudeo (INEGI).</div>
+  <label for="desc">Descuento que piensas dar, %</label>
+  <input id="desc" type="number" step="0.01" min="0" max="60" value="0">
+  <label>Plazo en meses</label>
+  <div class="seg" id="plazo"><button data-p="3" aria-pressed="false">3</button><button data-p="6" aria-pressed="false">6</button><button data-p="12" aria-pressed="true">12</button></div>
+  <details>
+    <summary>Más opciones</summary>
+    <label for="term">Terminal de cobro</label>
+    <select id="term"></select>
+    <label for="iva">IVA de la comisión</label>
+    <select id="iva"><option value="1">Sí lo acredito</option><option value="0">No lo acredito</option></select>
+    <div class="nota" id="nterm"></div>
+  </details>
+</section>
+
+<section>
+  <div class="paso">2 · Esto es lo que pasa</div>
+  <div class="veredicto" id="sem"><div class="luz"></div><div><b id="semt">–</b><span id="semd"></span></div></div>
+  <div class="kpis">
+    <div class="kpi"><div class="t">Sin MSI, de cada $100 que vendes te quedan</div><div class="v" id="k1">–</div><div class="p" id="k1p"></div></div>
+    <div class="kpi"><div class="t">Con MSI a <span id="plz">12</span> meses te quedan</div><div class="v" id="k2">–</div><div class="p" id="k2p"></div></div>
+    <div class="kpi"><div class="t">Para ganar lo mismo, tendrías que vender</div><div class="v" id="k3">–</div><div class="p" id="k3p"></div></div>
+  </div>
+  <table class="plazos" id="tp" aria-label="Comparación por plazo">
+    <thead><tr><th>Plazo</th><th>Comisión extra</th><th>Se lleva de tu margen</th><th>Tienes que vender</th><th>Resultado</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <div class="regla"><b>Regla:</b> comisión extra ÷ (margen − comisión extra) = cuánto más tienes que vender. Si la comisión extra se lleva más de una quinta parte de tu margen, ese plazo no se paga solo.</div>
+  <div class="paso" style="margin-top:14px">3 · Esto es lo que hay que hacer antes del Buen Fin</div>
+  <ol class="acciones" id="acc"></ol>
+</section>
+</div>
+
+<section class="card graf" aria-label="Gráfica">
+  <h2>Compara plazos y descuentos</h2>
+  <p class="nota" style="margin:0 0 4px">Cada barra es cuánto más tendrías que vender para ganar lo mismo que sin MSI.</p>
+  <svg id="g" viewBox="0 0 1100 300" width="100%" role="img" aria-label="Cuánto más tendrías que vender, según plazo y descuento"></svg>
+  <div class="leyenda"><span><i style="background:#9DB0C6"></i>3 MSI</span><span><i style="background:#4A6785"></i>6 MSI</span><span><i style="background:#12213A"></i>12 MSI</span><span><i style="background:#C4533A"></i>Tu caso</span><span>Recuadro punteado: pierdes dinero</span></div>
+  <div class="nota">▲ sube, ▼ baja. Vino = te perjudica (hay que vender más); verde = te favorece; azul = sin cambio. Son cuentas directas, no una estimación estadística. <span id="gsub"></span></div>
+</section>
+</main>
+
+<div class="fuentes">
+  <table>
+    <tr><th>Dato</th><th>Valor</th><th>Fuente</th><th>Consulta</th><th>Estatus</th></tr>
+    %%FILAS_FUENTES%%
+  </table>
+  <details>
+    <summary>Cómo se calculó</summary>
+    <p>Comparo contra vender de contado con tarjeta, sin MSI ni descuento. Ganancia por cada $100 de lista = 100 − costo − comisión base. Con MSI y un descuento d: (100 − d) × (1 − comisión base − comisión extra) − costo. Lo que tienes que vender de más = ganancia sin MSI ÷ ganancia con MSI − 1. Si no acreditas el IVA, las comisiones se multiplican por 1.16.</p>
+    <p>"Es como prestarle a tu cliente": la tasa mensual que iguala los pagos de tu cliente con lo que tú recibes hoy, llevada a 12 meses.</p>
+    <p>El semáforo es criterio propio: verde hasta 10% más piezas, azul hasta 25% (la comisión extra se lleva hasta una quinta parte de tu margen), vino si es más o si pierdes. El precio de lista no cambia y no se mide cuánto vende de más cada negocio. No hay dato público de qué parte de las ventas del Buen Fin va a MSI. Porcentajes con un decimal; pesos con dos.</p>
+  </details>
+  <p class="legal">Elaboración propia con datos de Clip, Mercado Pago, Banxico, INEGI y CONCANACO Servytur. Contenido informativo; no constituye asesoría legal, financiera ni comercial. Sin aval ni relación con las fuentes ni con las empresas citadas. Clip y Mercado Pago Point son marcas de sus respectivos titulares.</p>
+</div>
+<div class="filete"></div>
+<footer><div class="n">%%SELLO%%<span>Ernesto Roldán</span></div><div class="r">Business Intelligence &amp; Analytics</div></footer>
+</div>
+
+<script>
+const D = %%DATOS%%;
+const $ = id => document.getElementById(id);
+const fmt = (v, s = "") => v.toLocaleString("es-MX", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + s;   // pesos: 2 decimales
+const pct = (v, s = "") => v.toLocaleString("es-MX", {minimumFractionDigits: 0, maximumFractionDigits: 1}) + s;  // porcentajes: 1 decimal, sin ".0"
+// Delta con triángulo, signo real y color por consecuencia para el negocio (Guía, sección 3).
+// subeEsBueno: true si un aumento favorece al negocio. Cero = neutro, sin triángulo.
+function delta(v, s, subeEsBueno) {
+  if (Math.abs(v) < 0.005) return `<span class="d neu">${pct(0, s)}</span>`;
+  const sube = v > 0, cls = (sube === subeEsBueno) ? "pos" : "neg";
+  return `<span class="d ${cls}">${sube ? "▲ +" : "▼ −"}${pct(Math.abs(v), s)}</span>`;
+}
+let plazo = 12;
+
+function tasaAnual(s, n) {            // s en %, tasa efectiva anual implícita en %
+  s = s / 100; let lo = 1e-9, hi = 1;
+  const f = r => { let a = 0; for (let t = 1; t <= n; t++) a += (1 / n) / Math.pow(1 + r, t); return a - (1 - s); };
+  for (let i = 0; i < 200; i++) { const m = (lo + hi) / 2; if (f(m) > 0) lo = m; else hi = m; }
+  const r = (lo + hi) / 2; return (Math.pow(1 + r, 12) - 1) * 100;
+}
+function escenario(costo, d, base, sob, k, n) {
+  const feeB = base * k, feeS = sob * k;
+  const m0 = 100 - costo - feeB;
+  const m1 = (100 - d) * (1 - (feeB + feeS) / 100) - costo;
+  return {feeB, feeS, m0, m1, extra: m1 <= 0 ? null : (m0 / m1 - 1) * 100,
+          equiv: (1 - (1 - d / 100) * (1 - feeS / 100)) * 100, anual: tasaAnual(feeS, n)};
+}
+function leer() {
+  const costo = 100 - parseFloat($("valor").value);
+  const d = Math.max(0, parseFloat($("desc").value) || 0);
+  const t = D.terminales[$("term").value];
+  const k = $("iva").value === "1" ? 1 : 1 + D.iva;
+  return {costo, d, t, k};
+}
+function render() {
+  const {costo, d, t, k} = leer();
+  if (!isFinite(costo)) return;
+  const e = escenario(costo, d, t.base, t.sobretasa[plazo], k, plazo);
+  $("plz").textContent = plazo;
+  const dinero = v => (v < 0 ? "−$" : "$") + fmt(Math.abs(v));
+  $("k1").textContent = dinero(e.m0);
+  $("k1p").textContent = "después de la comisión normal de tarjeta";
+  $("k2").innerHTML = '<span class="' + (e.m1 < e.m0 ? "neg" : "pos") + '">' + dinero(e.m1) + "</span>";
+  const dm = e.m1 - e.m0;
+  const dmTxt = Math.abs(dm) < 0.005 ? '<span class="d neu">$' + fmt(0) + "</span>" : '<span class="d ' + (dm > 0 ? "pos" : "neg") + '">' + (dm > 0 ? "▲ +$" : "▼ −$") + fmt(Math.abs(dm)) + "</span>";
+  $("k2p").innerHTML = dmTxt + " frente a vender sin MSI. La comisión extra es de " + pct(e.feeS, "%") + " ($" + fmt(e.feeS * 10) + " por cada $1,000).";
+  $("k3").innerHTML = e.extra === null ? '<span class="neg">Nada alcanza</span>' : delta(e.extra, "%", false);
+  $("k3p").textContent = e.extra === null ? "Con ese descuento pierdes dinero en cada venta." : "más piezas. Es como prestarle a tu cliente al " + pct(e.anual, "%") + " anual durante " + plazo + " meses.";
+  let cls, tit, det;
+  const ext = e.extra === null ? null : pct(e.extra, "%");
+  if (e.extra === null) { cls = "rojo"; tit = "No te conviene"; det = "Con ese descuento y los MSI, cada venta te deja pérdida."; }
+  else if (e.extra > 25) { cls = "rojo"; tit = "No te conviene"; det = "A " + plazo + " meses tendrías que vender " + ext + " más solo para quedar igual que sin MSI."; }
+  else if (e.extra > 10) { cls = "medio"; tit = "Depende de cuánto vendas de más"; det = "A " + plazo + " meses tendrías que vender " + ext + " más. Solo vale la pena si los MSI de verdad te atraen esas ventas."; }
+  else { cls = "verde"; tit = "Te conviene"; det = "A " + plazo + " meses solo tendrías que vender " + ext + " más para ganar lo mismo. Es alcanzable."; }
+  $("sem").className = "veredicto " + cls; $("semt").textContent = tit; $("semd").textContent = det;
+  let mejor = null;
+  for (const p of D.plazos) { const x = escenario(costo, d, t.base, t.sobretasa[p], k, p); if (x.extra !== null && x.extra <= 25) mejor = p; }
+  $("acc").innerHTML =
+    "<li>" + (mejor === null
+      ? "<b>No ofrezcas MSI a ningún plazo</b> con ese descuento. Quítalo o cobra solo de contado."
+      : "Fija tu <b>plazo máximo en " + mejor + " meses</b>" + (d > 0 ? " con ese descuento" : "") + ", con esta cuenta y no por costumbre.") + "</li>" +
+    "<li><b>No sumes descuento</b> a los MSI.</li>" +
+    "<li><b>No subas el precio de lista</b>: Profeco lo vigila.</li>";
+  const m0 = 100 - costo - t.base * k;
+  $("tp").querySelector("tbody").innerHTML = D.plazos.map(p => {
+    const x = escenario(costo, d, t.base, t.sobretasa[p], k, p);
+    const parte = m0 > 0 ? x.feeS / m0 * 100 : NaN;
+    const [c, txt] = (x.extra === null || x.extra > 25) ? ["neg", "No se paga solo"] : (x.extra > 10 ? ["neu", "Depende"] : ["pos", "Alcanza"]);
+    return '<tr class="' + (p === plazo ? "sel" : "") + '"><td>' + p + " meses</td><td>" + pct(x.feeS, "%") + "</td><td>" + (isFinite(parte) ? pct(parte, "%") : "–") +
+      "</td><td>" + (x.extra === null ? '<span class="d neg">Pierdes</span>' : delta(x.extra, "%", false)) + '</td><td class="d ' + c + '">' + txt + "</td></tr>";
+  }).join("");
+  $("nterm").textContent = t.nombre + ": comisión base " + pct(t.base, "%") + "; comisión extra a " + plazo + " meses " + pct(t.sobretasa[plazo], "%") + (k > 1 ? " más IVA." : " (sin IVA).");
+  grafica(costo, t, k, d);
+}
+function grafica(costo, t, k, dSel) {
+  const W = 1100, H = 300, L = 56, R = 10, T = 24, B = 40, CAP = 400;
+  const pw = W - L - R, ph = H - T - B, gd = D.descuentos, np = D.plazos.length;
+  const gw = pw / gd.length, bw = Math.min(64, (gw - 16) / np), col = {3: "#9DB0C6", 6: "#4A6785", 12: "#12213A"};
+  let s = "";
+  for (let y = 0; y <= CAP; y += 100) {
+    const yy = T + ph - (y / CAP) * ph;
+    s += `<line x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}" stroke="#D9D2C2" stroke-width="1"/><text x="${L - 8}" y="${yy + 4}" text-anchor="end" font-size="14" fill="#5B6573">${y}%</text>`;
+  }
+  gd.forEach((d, gi) => {
+    const x0 = L + gi * gw + (gw - bw * np) / 2;
+    D.plazos.forEach((p, pi) => {
+      const e = escenario(costo, d, t.base, t.sobretasa[p], k, p), x = x0 + pi * bw;
+      const sel = p === plazo && Math.abs(d - dSel) < 1e-9;
+      const c = sel ? "#C4533A" : col[p];
+      if (e.extra === null) {
+        s += `<rect x="${x + 3}" y="${T + ph - 30}" width="${bw - 6}" height="30" fill="none" stroke="${c}" stroke-width="1.5" stroke-dasharray="3 3"/><text x="${x + bw / 2}" y="${T + ph - 36}" text-anchor="middle" font-size="13" font-weight="500" fill="#8F2B3E">pierdes</text>`;
+      } else {
+        const h = Math.min(e.extra, CAP) / CAP * ph, cut = e.extra > CAP;
+        s += `<rect x="${x + 3}" y="${T + ph - h}" width="${bw - 6}" height="${h}" fill="${c}" rx="2"/>`;
+        s += `<text x="${x + bw / 2}" y="${T + ph - h - 5}" text-anchor="middle" font-size="12.5" font-weight="500" fill="#8F2B3E">${cut ? "▲ >+400" : "▲ +" + pct(e.extra)}</text>`;
+      }
+    });
+    s += `<text x="${L + gi * gw + gw / 2}" y="${H - 14}" text-anchor="middle" font-size="15" font-weight="500" fill="#1B1F27">${d === 0 ? "Sin descuento" : "Descuento extra " + d + "%"}</text>`;
+  });
+  $("g").innerHTML = s;
+  $("gsub").textContent = "Con margen de " + pct(100 - costo, "%") + ", " + t.nombre + ", IVA " + (k > 1 ? "que no acreditas" : "que sí acreditas") + ". La escala llega hasta 400%.";
+}
+// inicio
+for (const [k, v] of Object.entries(D.terminales)) { const o = document.createElement("option"); o.value = k; o.textContent = v.nombre; $("term").appendChild(o); }
+$("term").value = "mp";
+$("valor").value = (100 - D.costo_defecto).toFixed(2);
+document.querySelectorAll("#plazo button").forEach(b => b.addEventListener("click", () => {
+  plazo = +b.dataset.p; document.querySelectorAll("#plazo button").forEach(x => x.setAttribute("aria-pressed", x === b)); render();
+}));
+["valor", "desc", "term", "iva"].forEach(id => $(id).addEventListener("input", render));
+render();
+</script>
+</body>
+</html>
