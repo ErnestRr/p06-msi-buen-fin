@@ -166,10 +166,9 @@ input[type=number],select{font-size:17px}
 <script>
 const D = %%DATOS%%;
 const $ = id => document.getElementById(id);
-const fmt = (v, s = "") => v.toLocaleString("es-MX", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + s;   // pesos: 2 decimales
-const pct = (v, s = "") => v.toLocaleString("es-MX", {minimumFractionDigits: 0, maximumFractionDigits: 1}) + s;  // porcentajes: 1 decimal, sin ".0"
-// Delta con triángulo, signo real y color por consecuencia para el negocio (Guía, sección 3).
-// subeEsBueno: true si un aumento favorece al negocio. Cero = neutro, sin triángulo.
+const fmt = (v, s = "") => v.toLocaleString("es-MX", {minimumFractionDigits: 2, maximumFractionDigits: 2}) + s;
+const pct = (v, s = "") => v.toLocaleString("es-MX", {minimumFractionDigits: 0, maximumFractionDigits: 1}) + s;
+// color según lo que significa para el negocio, no según el signo
 function delta(v, s, subeEsBueno) {
   if (Math.abs(v) < 0.005) return `<span class="d neu">${pct(0, s)}</span>`;
   const sube = v > 0, cls = (sube === subeEsBueno) ? "pos" : "neg";
@@ -177,7 +176,7 @@ function delta(v, s, subeEsBueno) {
 }
 let plazo = 12;
 
-function tasaAnual(s, n) {            // s en %, tasa efectiva anual implícita en %
+function tasaAnual(s, n) {
   s = s / 100; let lo = 1e-9, hi = 1;
   const f = r => { let a = 0; for (let t = 1; t <= n; t++) a += (1 / n) / Math.pow(1 + r, t); return a - (1 - s); };
   for (let i = 0; i < 200; i++) { const m = (lo + hi) / 2; if (f(m) > 0) lo = m; else hi = m; }
@@ -265,7 +264,6 @@ function grafica(costo, t, k, dSel) {
   $("g").innerHTML = s;
   $("gsub").textContent = "Con margen de " + pct(100 - costo, "%") + ", " + t.nombre + ", IVA " + (k > 1 ? "que no acreditas" : "que sí acreditas") + ". La escala llega hasta 400%.";
 }
-// inicio
 for (const [k, v] of Object.entries(D.terminales)) { const o = document.createElement("option"); o.value = k; o.textContent = v.nombre; $("term").appendChild(o); }
 $("term").value = "mp";
 $("valor").value = (100 - D.costo_defecto).toFixed(2);

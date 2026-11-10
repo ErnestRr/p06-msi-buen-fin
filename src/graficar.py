@@ -1,6 +1,4 @@
-"""P06. Genera el reporte interactivo (un solo HTML autocontenido, sin servidor).
-Uso: python src/graficar.py   (escribe visualizaciones/msi_buen_fin.html)
-"""
+"""Arma el reporte interactivo: un solo HTML con todo incrustado."""
 import base64
 import json
 from pathlib import Path
@@ -17,7 +15,6 @@ SELLO = ('<svg viewBox="0 0 100 100" width="46" height="46"><path d="M0 0 H84 L1
          '<path d="M68 68 V32 H78 A9 9 0 0 1 78 50 H68 M78 50 L87 68"/></g>'
          '<line x1="14" y1="50" x2="25" y2="50" stroke="#C4533A" stroke-width="6.5" stroke-linecap="square"/></svg>')
 
-# (dato, valor, fuente, fecha de consulta, estatus)
 FUENTES_TABLA = [
     ("Comisión base Clip", "3% + $1 + IVA (ventas regulares)", "Clip México, calculadora de comisiones (clip.mx/como-funciona-clip/calculadora-clip)", "10-nov-2026", "Oficial"),
     ("Depósito de Clip", "24 horas garantizadas", "Clip México, calculadora de comisiones (clip.mx/como-funciona-clip/calculadora-clip)", "10-nov-2026", "Oficial"),
