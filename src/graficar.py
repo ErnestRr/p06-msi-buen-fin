@@ -9,8 +9,8 @@ RAIZ = Path(__file__).resolve().parents[1]
 FUENTES = RAIZ / "src" / "fuentes"
 SALIDA = RAIZ / "visualizaciones" / "msi_buen_fin.html"
 
-SELLO = ('<svg viewBox="0 0 100 100" width="46" height="46"><path d="M0 0 H84 L100 16 V100 H0 Z" fill="#F6F1E7"/>'
-         '<g fill="none" stroke="#12213A" stroke-width="6.5" stroke-linecap="square" stroke-linejoin="miter">'
+SELLO = ('<svg viewBox="0 0 100 100" width="46" height="46"><path d="M0 0 H84 L100 16 V100 H0 Z" fill="#F5F0E6"/>'
+         '<g fill="none" stroke="#12213C" stroke-width="6.5" stroke-linecap="square" stroke-linejoin="miter">'
          '<path d="M28 32 H14 V68 H28"/><path d="M38 68 V32 H48 A9 9 0 0 1 48 50 H38 M48 50 L57 68"/>'
          '<path d="M68 68 V32 H78 A9 9 0 0 1 78 50 H68 M78 50 L87 68"/></g>'
          '<line x1="14" y1="50" x2="25" y2="50" stroke="#C4533A" stroke-width="6.5" stroke-linecap="square"/></svg>')
@@ -43,7 +43,7 @@ def construir():
             .replace("%%FONT_SERIF%%", b64("instrument-serif-latin-400-normal.woff2"))
             .replace("%%FONT_SERIF_IT%%", b64("instrument-serif-latin-400-italic.woff2"))
             .replace("%%FONT_INTER%%", b64("inter-latin-400-normal.woff2"))
-            .replace("%%FONT_INTER_500%%", b64("inter-latin-500-normal.woff2"))
+            .replace("%%FONT_INTER_600%%", b64("inter-latin-600-normal.woff2"))
             .replace("%%DATOS%%", json.dumps(datos, ensure_ascii=False))
             .replace("%%SELLO%%", SELLO)
             .replace("%%FILAS_FUENTES%%", filas))

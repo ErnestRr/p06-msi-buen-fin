@@ -8,30 +8,30 @@
 @font-face{font-family:"Instrument Serif";font-style:normal;font-weight:400;src:url(data:font/woff2;base64,%%FONT_SERIF%%) format("woff2")}
 @font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;src:url(data:font/woff2;base64,%%FONT_SERIF_IT%%) format("woff2")}
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;src:url(data:font/woff2;base64,%%FONT_INTER%%) format("woff2")}
-@font-face{font-family:"Inter";font-style:normal;font-weight:500;src:url(data:font/woff2;base64,%%FONT_INTER_500%%) format("woff2")}
-:root{--marino:#12213A;--acero:#4A6785;--terra:#C4533A;--marfil:#F6F1E7;--grafito:#1B1F27;--gris:#5B6573;--claro:#9DB0C6;
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;src:url(data:font/woff2;base64,%%FONT_INTER_600%%) format("woff2")}
+:root{--marino:#12213C;--acero:#4A6785;--terra:#C4533A;--marfil:#F5F0E6;--marfil-texto:#F6F1E8;--grafito:#1B1F27;--gris:#5B6573;--claro:#9DB0C6;
 --tarjeta:#FBF8F1;--borde:#E3DBC9;--pista:#ECE5D6;--linea:#D9D2C2;--verde:#2B6A52;--vino:#8F2B3E}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--marfil);color:var(--grafito);font-family:"Inter",Arial,sans-serif;font-size:15px;line-height:1.45}
 .marco{border:14px solid var(--marino);min-height:100vh;display:flex;flex-direction:column}
 main{max-width:1120px;width:100%;margin:0 auto;padding:22px 28px 8px;flex:1}
-.etq{font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border-bottom:2px solid var(--acero);display:inline-block;padding-bottom:3px}
+.etq{font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border-bottom:2px solid var(--acero);display:inline-block;padding-bottom:3px}
 h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:42px;line-height:1.05;margin:12px 0 4px}
 h1 em{color:var(--terra)}
 .sub{color:var(--gris)}
 .grid{display:grid;grid-template-columns:270px 1fr;gap:18px;margin-top:16px}
 .card{background:var(--tarjeta);border:1px solid var(--borde);border-radius:4px;padding:16px 18px}
-label{display:block;font-weight:500;font-size:13px;margin:12px 0 4px}
+label{display:block;font-weight:600;font-size:13px;margin:12px 0 4px}
 label:first-child{margin-top:0}
 input[type=number],select{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--linea);border-radius:4px;background:var(--marfil);color:var(--grafito)}
 .seg{display:flex;gap:6px}
-.seg button{flex:1;font:inherit;font-weight:500;padding:8px 0;border:1px solid var(--linea);background:var(--marfil);color:var(--marino);border-radius:4px;cursor:pointer}
-.seg button[aria-pressed=true]{background:var(--marino);color:var(--marfil);border-color:var(--marino)}
+.seg button{flex:1;font:inherit;font-weight:600;padding:8px 0;border:1px solid var(--linea);background:var(--marfil);color:var(--marino);border-radius:4px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--marino);color:var(--marfil-texto);border-color:var(--marino)}
 details{margin-top:12px;font-size:13px}
-details summary{cursor:pointer;color:var(--acero);font-weight:500}
+details summary{cursor:pointer;color:var(--acero);font-weight:600}
 .nota{font-size:12px;color:var(--gris);margin-top:4px}
 .pos{color:var(--verde)}.neg{color:var(--vino)}.neu{color:var(--acero)}
-.d{font-weight:500}
+.d{font-weight:600}
 .veredicto{display:flex;gap:16px;align-items:center;padding:16px 20px;background:var(--tarjeta);border:1px solid var(--borde);border-radius:4px}
 .veredicto .luz{width:30px;height:30px;border-radius:50%;flex:none}
 .veredicto b{font-family:"Instrument Serif",serif;font-weight:400;font-size:34px;line-height:1.05;display:block}
@@ -45,7 +45,7 @@ details summary{cursor:pointer;color:var(--acero);font-weight:500}
 .kpi .v{font-family:"Instrument Serif",serif;font-size:44px;line-height:1.1;color:var(--marino)}
 .kpi .p{font-size:12.5px;color:var(--gris)}
 .regla{margin-top:12px;padding:12px 18px;border-left:4px solid var(--marino);background:var(--tarjeta);font-size:15px}
-.regla b{font-weight:500}
+.regla b{font-weight:600}
 .graf{margin-top:16px}
 .graf h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:24px}
 svg text{font-family:"Inter",Arial,sans-serif}
@@ -53,19 +53,19 @@ svg text{font-family:"Inter",Arial,sans-serif}
 .leyenda i{display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:-1px;border-radius:2px}
 .fuentes{max-width:1120px;margin:6px auto 0;padding:0 28px 14px;width:100%}
 .fuentes table{width:100%;border-collapse:collapse;font-size:11.5px;color:var(--gris)}
-.fuentes th{font-weight:500;text-align:left;color:var(--grafito);border-bottom:1px solid var(--linea);padding:3px 6px 3px 0}
+.fuentes th{font-weight:600;text-align:left;color:var(--grafito);border-bottom:1px solid var(--linea);padding:3px 6px 3px 0}
 .fuentes td{padding:3px 6px 3px 0;vertical-align:top;border-bottom:1px solid var(--pista)}
 .fuentes p{font-size:12px;color:var(--gris);margin-top:6px}
 .fuentes p.legal{font-style:italic}
-.fuentes p b{font-weight:500;color:var(--grafito)}
+.fuentes p b{font-weight:600;color:var(--grafito)}
 .filete{height:4px;background:var(--terra)}
-footer{background:var(--marino);color:var(--marfil);display:flex;justify-content:space-between;align-items:center;padding:12px 28px;gap:12px}
+footer{background:var(--marino);color:var(--marfil-texto);display:flex;justify-content:space-between;align-items:center;padding:12px 28px;gap:12px}
 footer .n{display:flex;align-items:center;gap:12px;font-family:"Instrument Serif",serif;font-size:26px}
-footer .r{font-weight:500;font-size:12px;letter-spacing:.06em}
+footer .r{font-weight:600;font-size:12px;letter-spacing:.06em}
 @media(max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr}h1{font-size:32px}.fuentes table{display:block;overflow-x:auto}}
 
 body{font-size:16px}
-.paso{font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acero);margin-bottom:8px}
+.paso{font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acero);margin-bottom:8px}
 .sub{font-size:18px;max-width:900px;margin-top:6px}
 .nota{font-size:13.5px}
 .kpi .t{font-size:15px;min-height:44px}
@@ -80,14 +80,14 @@ body{font-size:16px}
 input[type=number],select{font-size:17px}
 .graf h2{font-size:28px}
 .plazos{width:100%;border-collapse:collapse;margin-top:12px;background:var(--tarjeta);border:1px solid var(--borde);font-size:16px}
-.plazos th{font-weight:500;font-size:13px;color:var(--gris);text-align:left;padding:8px 12px;border-bottom:1px solid var(--linea)}
+.plazos th{font-weight:600;font-size:13px;color:var(--gris);text-align:left;padding:8px 12px;border-bottom:1px solid var(--linea)}
 .plazos td{padding:9px 12px;border-bottom:1px solid var(--pista);font-size:17px}
 .plazos tr:last-child td{border-bottom:0}
 .plazos tr.sel td{background:var(--pista)}
-.plazos td:first-child{font-weight:500}
+.plazos td:first-child{font-weight:600}
 .acciones{margin:0;padding:12px 18px 12px 40px;background:var(--tarjeta);border-left:4px solid var(--marino);font-size:17px}
 .acciones li{margin:4px 0}
-.acciones b{font-weight:500}
+.acciones b{font-weight:600}
 .regla{margin-top:10px}
 @media(max-width:900px){.plazos{font-size:14px}.plazos td,.plazos th{padding:6px}}
 </style>
@@ -141,7 +141,7 @@ input[type=number],select{font-size:17px}
   <h2>Compara plazos y descuentos</h2>
   <p class="nota" style="margin:0 0 4px">Cada barra es cuánto más tendrías que vender para ganar lo mismo que sin MSI.</p>
   <svg id="g" viewBox="0 0 1100 300" width="100%" role="img" aria-label="Cuánto más tendrías que vender, según plazo y descuento"></svg>
-  <div class="leyenda"><span><i style="background:#9DB0C6"></i>3 MSI</span><span><i style="background:#4A6785"></i>6 MSI</span><span><i style="background:#12213A"></i>12 MSI</span><span><i style="background:#C4533A"></i>Tu caso</span><span>Recuadro punteado: pierdes dinero</span></div>
+  <div class="leyenda"><span><i style="background:#9DB0C6"></i>3 MSI</span><span><i style="background:#4A6785"></i>6 MSI</span><span><i style="background:#12213C"></i>12 MSI</span><span><i style="background:#C4533A"></i>Tu caso</span><span>Recuadro punteado: pierdes dinero</span></div>
   <div class="nota">▲ sube, ▼ baja. Vino = te perjudica (hay que vender más); verde = te favorece; azul = sin cambio. Son cuentas directas, no una estimación estadística. <span id="gsub"></span></div>
 </section>
 </main>
@@ -239,7 +239,7 @@ function render() {
 function grafica(costo, t, k, dSel) {
   const W = 1100, H = 300, L = 56, R = 10, T = 24, B = 40, CAP = 400;
   const pw = W - L - R, ph = H - T - B, gd = D.descuentos, np = D.plazos.length;
-  const gw = pw / gd.length, bw = Math.min(64, (gw - 16) / np), col = {3: "#9DB0C6", 6: "#4A6785", 12: "#12213A"};
+  const gw = pw / gd.length, bw = Math.min(64, (gw - 16) / np), col = {3: "#9DB0C6", 6: "#4A6785", 12: "#12213C"};
   let s = "";
   for (let y = 0; y <= CAP; y += 100) {
     const yy = T + ph - (y / CAP) * ph;
@@ -252,14 +252,14 @@ function grafica(costo, t, k, dSel) {
       const sel = p === plazo && Math.abs(d - dSel) < 1e-9;
       const c = sel ? "#C4533A" : col[p];
       if (e.extra === null) {
-        s += `<rect x="${x + 3}" y="${T + ph - 30}" width="${bw - 6}" height="30" fill="none" stroke="${c}" stroke-width="1.5" stroke-dasharray="3 3"/><text x="${x + bw / 2}" y="${T + ph - 36}" text-anchor="middle" font-size="13" font-weight="500" fill="#8F2B3E">pierdes</text>`;
+        s += `<rect x="${x + 3}" y="${T + ph - 30}" width="${bw - 6}" height="30" fill="none" stroke="${c}" stroke-width="1.5" stroke-dasharray="3 3"/><text x="${x + bw / 2}" y="${T + ph - 36}" text-anchor="middle" font-size="13" font-weight="600" fill="#8F2B3E">pierdes</text>`;
       } else {
         const h = Math.min(e.extra, CAP) / CAP * ph, cut = e.extra > CAP;
         s += `<rect x="${x + 3}" y="${T + ph - h}" width="${bw - 6}" height="${h}" fill="${c}" rx="2"/>`;
-        s += `<text x="${x + bw / 2}" y="${T + ph - h - 5}" text-anchor="middle" font-size="12.5" font-weight="500" fill="#8F2B3E">${cut ? "▲ >+400" : "▲ +" + pct(e.extra)}</text>`;
+        s += `<text x="${x + bw / 2}" y="${T + ph - h - 5}" text-anchor="middle" font-size="12.5" font-weight="600" fill="#8F2B3E">${cut ? "▲ >+400" : "▲ +" + pct(e.extra)}</text>`;
       }
     });
-    s += `<text x="${L + gi * gw + gw / 2}" y="${H - 14}" text-anchor="middle" font-size="15" font-weight="500" fill="#1B1F27">${d === 0 ? "Sin descuento" : "Descuento extra " + d + "%"}</text>`;
+    s += `<text x="${L + gi * gw + gw / 2}" y="${H - 14}" text-anchor="middle" font-size="15" font-weight="600" fill="#1B1F27">${d === 0 ? "Sin descuento" : "Descuento extra " + d + "%"}</text>`;
   });
   $("g").innerHTML = s;
   $("gsub").textContent = "Con margen de " + pct(100 - costo, "%") + ", " + t.nombre + ", IVA " + (k > 1 ? "que no acreditas" : "que sí acreditas") + ". La escala llega hasta 400%.";
